@@ -14,5 +14,13 @@ describe("Unit Tests for User class", () => {
 		expect(user.bio).toBe("Bio")
 		expect(user.dateCreated).not.toBeUndefined()// Verifica que el valor no sea undefine
         expect(user.lastUpdated).not.toBeUndefined()
-	});
-})
+	})
+
+    test('2) Add getters', () =>{
+        const user = new User(1, "EinarDvls", "Einar", "Bio")
+        expect(user.getUsername).toBe("EinarDvls")
+        expect(user.getBio).toBe("Bio")
+        expect(user.getDateCreated).not.toBeUndefined()
+        expect(user.getLastUpdated).not.toBeUndefined()
+    })
+});
