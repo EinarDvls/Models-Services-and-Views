@@ -12,7 +12,7 @@ describe("Unit Tests for User class", () => {
 		expect(user.username).toBe("EinarDvls")
 		expect(user.name).toBe("Einar")
 		expect(user.bio).toBe("Bio")
-		expect(user.dateCreated).toBe("dateCreated")
-        expect(user.lastUpdated).toBe("lastUpdated")
+		expect(user.dateCreated).not.toBeUndefined()// Verifica que el valor no sea undefine
+        expect(user.lastUpdated).not.toBeUndefined()
 	});
 })
